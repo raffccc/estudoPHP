@@ -158,3 +158,14 @@
 	 * closures.
 	 */
 ?>
+
+<?php 
+	/*
+	 * is_null(), pra saber se é nulo
+	 */
+
+	$uninitializedVariable = null;
+	if (is_null($uninitializedVariable)) {
+		echo "Yes!";
+	}
+?>
