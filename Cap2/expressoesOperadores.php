@@ -35,8 +35,8 @@
 	 *  $var++, retorna o valor atualizardo de var e depois incrementa-a.
 	 *  
 	 *  Também podem ser utilizados em Strings, ex:
-	 *  a -> b
-	 *  az > ba
+	 *  a vira b
+	 *  az vira ba
 	 */ 
 ?>
 
@@ -44,13 +44,13 @@
 	##Comparadores##
 
 	/*
-	 * Operando 1			Operando 2			 Comparação
-	 * Número				Número				 Número
-	 * String Numérica		String Numérica		 Número
-	 * String Numérica		Número				 Número
-	 * String Numérica		String Não Numérica	 Número
-	 * String Não Numérica	Número				 Lexográfica
-	 * String Não Numérica 	String Não Numérica	 Lexográfica										
+	 * Operando 1			Operando 2			 			   Comparação
+	 * Número				Número				 				 Número
+	 * String Numérica		String Numérica		 				 Número
+	 * String Numérica		Número				 				 Número
+	 * String Numérica		String Não Int. Numérica	 		 Número
+	 * String Não Numérica	Número				 				Lexográfica
+	 * String Não Numérica 	String Não Numérica	 				Lexográfica										
 	 */
 
 	//Se quiser comprarar duas Strings numéricas lexograficamente usar a função strcmp()
@@ -128,7 +128,7 @@
 <?php
 	##Operadores de Atribuição##
 
-	//No php esses operadores retorna o resultado da operação
+	//No php esses operadores retornam o resultado da operação
 	$a = 5;
 	$b = 10;
 	$c = ($a = $b); #Aqui $a=$b retorna 10, c=10.

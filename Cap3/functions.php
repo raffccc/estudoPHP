@@ -6,25 +6,25 @@
  * São case insensitive
  */
 function coluna() { ?>
-	<td></td>
+<td></td>
 <?php 
 }
 ?>
 
 <html>
-	<body>
-		<table border="1">
-			<tr>
+<body>
+	<table border="1">
+		<tr>
 				<?= coluna() ?>
 				<td>col2</td>
-			</tr>
-			<tr>
-				<td>oi</td>
-				<td>teste</td>
-			</tr>
-		</table>
-	</body>
-</html>		
+		</tr>
+		<tr>
+			<td>oi</td>
+			<td>teste</td>
+		</tr>
+	</table>
+</body>
+</html>
 
 <?php 
 /*
@@ -45,7 +45,7 @@ outer("well");
 inner("reader");
 ?>
 
-<br/>
+<br />
 
 <?php
 ###ESCOPO DAS VARIÁVEIS###
@@ -70,7 +70,7 @@ for ($i = 1; $i <= 5; $i++) {
 }
 ?>
 
-<br/>
+<br />
 
 <?php
 ##PARÂMETROS DE FUNÇÃO##
@@ -104,7 +104,7 @@ function getPreferences($whichPreference = 'all') {
  * func_num_args(): número de parâmetros
  * func_get_arg(num_do_parâmetro)
  * 
- * O valor retornado de uma função dessa não pode servir de parâmetro para o chamado de outra função. Ex:
+ * O valor retornado de uma função dessa não pode servir de parâmetro para o chamado de outra função (no caso de funções com var-args). Ex:
  * 	- funcA(countList(1,2,3));
  * Deve ser feito assim:
  * 	- $a = countList(1,2,3);
@@ -138,21 +138,97 @@ class Clown extends Entertainment {}
 class Job {}
 function handleEntertainment(Entertainment $a, callable $callback = NULL){
 	echo "Handling " . get_class($a) . " fun\n";
-	if ($callback !== NULL) {
+	if ($callback !== null) {
 		$callback();
 	}
 }
 
 $callback = function() {
-	// do something
+	echo "entrei no callback <br/>";
 };
 
-handleEntertainment(new Clown); // works
+handleEntertainment(new Clown, $callback); // works
 //handleEntertainment(new Job, $callback); runtime error Job não é Entertainment
+?>
+
+<?php
+### RETORNANDO VALORES ###
+
+/*
+ * Métodos não tem tipo de retorno na assinatura do método.
+ * Funções sem retorno, retornam NULL.
+ * 
+ * Por padrão o retorno é por valor, por referência usa-se o &
+ */
+
+$names = array("Fred", "Barney", "Wilma", "Betty");
+
+function &findOne($n) {
+	global $names;
+	return $names[$n];
+}
+
+$person =& findOne(1); // Barney
+$person = "Barnetta"; // Muda $names[1] para Barnetta
+
+/*
+ * Retornar por referência muitas vezes não é necessário.
+ * É mais lento que por valor.
+ */
+?>
+
+<?php
+### FUNÇÕES EM VARIÁVEIS ###
+
+/*
+ * Supondo uma variável que armazena o valor "funcaoX", podemos
+ * chamar a função de mesmo nome assim $variavel();
+ * 
+ * Funções como echo() e isset() não podem ser chamado desse modo.
+ 
+ * $which = "echo";
+ * $which("hello, world"); //Problema
+ * 
+ * Caso a função não exista ocorre erro.
+ */
+$funcao = "countList";
+if (function_exists ($funcao)) {
+	echo $funcao(1, 2, 3);
+}
 ?>
 
 <br/>
 
 <?php
-### RETORNANDO VALORES ###
+### FUNÇÕES ANÔNIMAS ###
+
+/*
+ * Funções definidas na chamada do método, de forma localizada.
+ */
+
+$array = array("really long string here, boy", "this", "middling length", "larger");
+usort($array, function($a, $b) {
+	return strlen($a) - strlen($b);
+});
+
+print_r($array);
+echo "<br/>";
+
+/*
+ * Pode-se fazer essas funções utilizarem variáveis no seu escopo. Exemplo:
+ */
+$array = array("really long string here, boy", "this", "middling length", "larger");
+$sortOption = 'random';
+
+//ORDENA RANDOMICAMENTE
+usort($array, function($a, $b) use ($sortOption) { 
+	if ($sortOption == 'random') {
+		return rand(0, 2) - 1;
+	}
+	else {
+		return strlen($a) - strlen($b);
+	}
+});
+
+print_r($array);
 ?>

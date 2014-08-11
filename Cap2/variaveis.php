@@ -36,7 +36,7 @@
 	 * Escopo local:
 	 * - Somente dentro de funções
 	 * - Por padrão, variáveis globais não são visualizadas dentro de função
-	 * - Não existe escolo de loop, bloco condicional ou outro tipo de bloco.
+	 * - Não existe escopo de loop, bloco condicional ou outro tipo de bloco.
 	 */
 
 	//Escopo global.

@@ -20,7 +20,7 @@
  * script incluiu ou requiriu (só as que foram incluídas com sucesso).
  */
 	
-include "basicoOO.php";
+@include "basicoOO.php";
 
 echo "<br/> Edison incluído, {$ed->name} <br/>";
 foreach (get_included_files() as $arquivoIncluido) {
