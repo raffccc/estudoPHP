@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Funções php podem possuir código html
- * Por convenção, todas as funções php são chamadas com todas as letras minúsculas
- * São case insensitive
+ * FunÃ§Ãµes php podem possuir cÃ³digo html
+ * Por convenÃ§Ã£o, todas as funÃ§Ãµes php sÃ£o chamadas com todas as letras minÃºsculas
+ * SÃ£o case insensitive
  */
 function coluna() { ?>
 <td></td>
@@ -28,10 +28,10 @@ function coluna() { ?>
 
 <?php 
 /*
- * Pode-se declarar funções uma dentro da outra. 
- * As funções internas podem ser chamadas normalmente externamente. 
- * A função interna não pega os argumentos da função externa automaticamente.
- * A função interna não pode ser chamada até a função externa ter sido chamada primeiro.
+ * Pode-se declarar funÃ§Ãµes uma dentro da outra. 
+ * As funÃ§Ãµes internas podem ser chamadas normalmente externamente. 
+ * A funÃ§Ã£o interna nÃ£o pega os argumentos da funÃ§Ã£o externa automaticamente.
+ * A funÃ§Ã£o interna nÃ£o pode ser chamada atÃ© a funÃ§Ã£o externa ter sido chamada primeiro.
  */
 
 function outer($a) {
@@ -48,7 +48,7 @@ inner("reader");
 <br />
 
 <?php
-###ESCOPO DAS VARIÁVEIS###
+###ESCOPO DAS VARIÃVEIS###
 
 //GLOBAL
 $a = 2;
@@ -62,7 +62,7 @@ echo $a;
 
 //STATIC
 function counter() {
-	static $count = 0; //Só tem esse valor quando counter() é chamado pela primeira vez.
+	static $count = 0; //SÃ³ tem esse valor quando counter() Ã© chamado pela primeira vez.
 	return $count++;
 }
 for ($i = 1; $i <= 5; $i++) {
@@ -73,9 +73,9 @@ for ($i = 1; $i <= 5; $i++) {
 <br />
 
 <?php
-##PARÂMETROS DE FUNÇÃO##
+##PARÃ‚METROS DE FUNÃ‡ÃƒO##
 
-//Passagem de parâmetro por valor
+//Passagem de parÃ¢metro por valor
 function imprime($valor) {
 	echo $valor . "<br/>";
 }
@@ -83,8 +83,8 @@ imprime("abc");
 
 $a = 3;
 /*
- * Passagem de parâmetro por referência, colca-se & antes.
- * Só aceita variáveis, dobrar(7), por exemplo, daria problema.
+ * Passagem de parÃ¢metro por referÃªncia, colca-se & antes.
+ * SÃ³ aceita variÃ¡veis, dobrar(7), por exemplo, daria problema.
  */
 function dobrar(&$valor) {
 	$valor *= 2;
@@ -92,19 +92,19 @@ function dobrar(&$valor) {
 dobrar($a);
 echo $a . "</br>";
 
-//Parâmetros default, não pode ser uma expressão complexa
+//ParÃ¢metros default, nÃ£o pode ser uma expressÃ£o complexa
 function getPreferences($whichPreference = 'all') {
 	// if $whichPreference is "all", return all prefs;
 	// otherwise, get the specific preference requested...
 }
 
-//Número variável de parâmetros (como o var-args do java), função não pode ter parâmetro.
+//NÃºmero variÃ¡vel de parÃ¢metros (como o var-args do java), funÃ§Ã£o nÃ£o pode ter parÃ¢metro.
 /*
- * func_get_args(): retorna um array com os parâmetros providos à função
- * func_num_args(): número de parâmetros
- * func_get_arg(num_do_parâmetro)
+ * func_get_args(): retorna um array com os parÃ¢metros providos Ã  funÃ§Ã£o
+ * func_num_args(): nÃºmero de parÃ¢metros
+ * func_get_arg(num_do_parÃ¢metro)
  * 
- * O valor retornado de uma função dessa não pode servir de parâmetro para o chamado de outra função (no caso de funções com var-args). Ex:
+ * O valor retornado de uma funÃ§Ã£o dessa nÃ£o pode servir de parÃ¢metro para o chamado de outra funÃ§Ã£o (no caso de funÃ§Ãµes com var-args). Ex:
  * 	- funcA(countList(1,2,3));
  * Deve ser feito assim:
  * 	- $a = countList(1,2,3);
@@ -125,13 +125,13 @@ function countList() {
 echo countList(1, 5, 9); // outputs "15"
 
 /*
- * Numa função com dois parâmetros, por exemplo, se passar apenas um parâmetro
- * o outro fica null e um warn é gerado.
+ * Numa funÃ§Ã£o com dois parÃ¢metros, por exemplo, se passar apenas um parÃ¢metro
+ * o outro fica null e um warn Ã© gerado.
  */
 
 /*
- * Pode-se tipar os parâmetros da função com uma classe (ou instâncias que estendem ou implementam essa classe),
- * instância que implementa uma interface. array ou callable.
+ * Pode-se tipar os parÃ¢metros da funÃ§Ã£o com uma classe (ou instÃ¢ncias que estendem ou implementam essa classe),
+ * instÃ¢ncia que implementa uma interface. array ou callable.
  */
 class Entertainment {}
 class Clown extends Entertainment {}
@@ -148,17 +148,17 @@ $callback = function() {
 };
 
 handleEntertainment(new Clown, $callback); // works
-//handleEntertainment(new Job, $callback); runtime error Job não é Entertainment
+//handleEntertainment(new Job, $callback); runtime error Job nÃ£o Ã© Entertainment
 ?>
 
 <?php
 ### RETORNANDO VALORES ###
 
 /*
- * Métodos não tem tipo de retorno na assinatura do método.
- * Funções sem retorno, retornam NULL.
+ * MÃ©todos nÃ£o tem tipo de retorno na assinatura do mÃ©todo.
+ * FunÃ§Ãµes sem retorno, retornam NULL.
  * 
- * Por padrão o retorno é por valor, por referência usa-se o &
+ * Por padrÃ£o o retorno Ã© por valor, por referÃªncia usa-se o &
  */
 
 $names = array("Fred", "Barney", "Wilma", "Betty");
@@ -172,24 +172,24 @@ $person =& findOne(1); // Barney
 $person = "Barnetta"; // Muda $names[1] para Barnetta
 
 /*
- * Retornar por referência muitas vezes não é necessário.
- * É mais lento que por valor.
+ * Retornar por referÃªncia muitas vezes nÃ£o Ã© necessÃ¡rio.
+ * Ã‰ mais lento que por valor.
  */
 ?>
 
 <?php
-### FUNÇÕES EM VARIÁVEIS ###
+### FUNÃ‡Ã•ES EM VARIÃVEIS ###
 
 /*
- * Supondo uma variável que armazena o valor "funcaoX", podemos
- * chamar a função de mesmo nome assim $variavel();
+ * Supondo uma variÃ¡vel que armazena o valor "funcaoX", podemos
+ * chamar a funÃ§Ã£o de mesmo nome assim $variavel();
  * 
- * Funções como echo() e isset() não podem ser chamado desse modo.
+ * FunÃ§Ãµes como echo() e isset() nÃ£o podem ser chamado desse modo.
  
  * $which = "echo";
  * $which("hello, world"); //Problema
  * 
- * Caso a função não exista ocorre erro.
+ * Caso a funÃ§Ã£o nÃ£o exista ocorre erro.
  */
 $funcao = "countList";
 if (function_exists ($funcao)) {
@@ -200,10 +200,10 @@ if (function_exists ($funcao)) {
 <br/>
 
 <?php
-### FUNÇÕES ANÔNIMAS ###
+### FUNÃ‡Ã•ES ANÃ”NIMAS ###
 
 /*
- * Funções definidas na chamada do método, de forma localizada.
+ * FunÃ§Ãµes definidas na chamada do mÃ©todo, de forma localizada.
  */
 
 $array = array("really long string here, boy", "this", "middling length", "larger");
@@ -215,7 +215,7 @@ print_r($array);
 echo "<br/>";
 
 /*
- * Pode-se fazer essas funções utilizarem variáveis no seu escopo. Exemplo:
+ * Pode-se fazer essas funÃ§Ãµes utilizarem variÃ¡veis no seu escopo. Exemplo:
  */
 $array = array("really long string here, boy", "this", "middling length", "larger");
 $sortOption = 'random';

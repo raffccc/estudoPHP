@@ -2,13 +2,13 @@
 #### Heredocs ####
 
 /*
- * Além do comportamento padrão com aspas duplas e aspas simples,
- * no php existe também os heredocs.
+ * AlÃ©m do comportamento padrÃ£o com aspas duplas e aspas simples,
+ * no php existe tambÃ©m os heredocs.
  * 
- * Heredocs são identificados por "<<< identificador", deve existir o espaço
+ * Heredocs sÃ£o identificados por "<<< identificador", deve existir o espaÃ§o
  * entre <<< e o nome do identificador.
  * 
- * O heredoc é terminado quando é encontrada uma linha apenas com o nome do
+ * O heredoc Ã© terminado quando Ã© encontrada uma linha apenas com o nome do
  * identificador.
  */
  
@@ -28,7 +28,7 @@ Template
 , "Fred", 35); //DEVE-SE CONTINUAR NA OUTRA LINHA
 
 /*
- * Espaços, aspas simples e duplas são preservadas no heredoc
+ * EspaÃ§os, aspas simples e duplas sÃ£o preservadas no heredoc
  */
 $dialogue = <<< NoMore
 "It's not going to happen!" she fumed.

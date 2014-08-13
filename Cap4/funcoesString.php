@@ -1,8 +1,12 @@
+<head>
+	<meta charset="UTF-8">
+</head>
+
 <?php
 #### ACESSANDO CARACTERES INDIVIDUAIS ####
 
 /*
- * strlen(): N˙mero de caracteres na string
+ * strlen(): N√∫mero de caracteres na string
  * 
  * para acessar um caractere $string{$indice}
  */
@@ -19,9 +23,9 @@ for ($i=0; $i < strlen($string); $i++) {
 
 /*
  * trim(), ltrim(), rtrim().
- * Recebem como par‚metro a string e optativamente a lista de caracteres que remover„o.
+ * Recebem como par√¢metro a string e optativamente a lista de caracteres que remover√£o.
  * 
- * Por padr„o remove: espaÁo, tab(\t), null(\0), carriage return(\r), vertical tab(x0B), nova linha (\n).
+ * Por padr√£o remove: espa√ßo, tab(\t), null(\0), carriage return(\r), vertical tab(x0B), nova linha (\n).
  */
 
 //Aqui quero que tire todos menos os tabs
@@ -54,15 +58,15 @@ print(ucwords($string2));
 ## HTML ##
 
 /*
- * htmlentities(): transforma a acentuaÁ„o no cÛdigo html, menos o espaÁo ( < = &lt; )
- * Recebe atÈ 3 par‚metros:
+ * htmlentities(): transforma a acentua√ß√£o no c√≥digo html, menos o espa√ßo ( < = &lt; )
+ * Recebe at√© 3 par√¢metros:
  * 	- 1, a String
- *  - 2, estilo das aspas: Se aspas simples ou duplas s„o transformadas. 
+ *  - 2, estilo das aspas: Se aspas simples ou duplas s√£o transformadas. 
  *  	ENT_COMPAT(default): converte apenas as aspas duplas, 
  *  	ENT_QUOTES: converte ambos os tipos de aspas
- *  	ENT_NOQUOTES: n„o converte nenhuma.
- *  	N„o existe opÁ„o de converter apenas as aspas simples.
- *  - 3, charset: Default È o ISO-8859-1
+ *  	ENT_NOQUOTES: n√£o converte nenhuma.
+ *  	N√£o existe op√ß√£o de converter apenas as aspas simples.
+ *  - 3, charset: Default √© o ISO-8859-1
  */
 $input = <<< End
 "Stop pulling my hair!" Jane's eyes flashed.<p>
@@ -78,7 +82,7 @@ $neither = htmlentities($input, ENT_NOQUOTES);
 // "Stop pulling my hair!" Jane's eyes flashed.&lt;p&gt;
 
 /*
- * htmlspecialchars() converte o menos conjunto possÌvel para gerar HTML v·lido:
+ * htmlspecialchars() converte o menos conjunto poss√≠vel para gerar HTML v√°lido:
  * 
  * - & para &amp;
  * - " para &quot;
@@ -88,19 +92,19 @@ $neither = htmlentities($input, ENT_NOQUOTES);
  */
 
 /*
- * Para fazer o comportamento contr·rio pode-se fazer o seguinte:
+ * Para fazer o comportamento contr√°rio pode-se fazer o seguinte:
  * 
- * - Utilizar o mÈtodo get_html_translation_table(), recebe qual o tipo de translation e
- * qual a regra de transformaÁ„o de aspas (ENT_COMPAT) default.
+ * - Utilizar o m√©todo get_html_translation_table(), recebe qual o tipo de translation e
+ * qual a regra de transforma√ß√£o de aspas (ENT_COMPAT) default.
  * 
  * - Realizar o array_flip(), que muda de chave para valor e vice-versa.
  * 
  * - strtr(): string translate, que recebe a string e no segundo argumento o array mapeando
- * a ocorrÍncia e para qual valor deve ser traduzido.
+ * a ocorr√™ncia e para qual valor deve ser traduzido.
  */
 
-//¸ substituÌdo pro &uuml; sem esse encoding n„o funciona, aparentemente ISO-5589-1. n„o È o default
-$str = htmlentities("Einst¸rzende Neubauten", ENT_COMPAT,'ISO-8859-1');
+//√â substitu√≠do pro &uuml; sem esse encoding n√£o funciona, aparentemente ISO-5589-1. n√£o √© o default
+$str = htmlentities("Einst√ºrzende Neubauten", ENT_COMPAT,'ISO-8859-1');
 var_dump($str);
 
 $table = get_html_translation_table(HTML_ENTITIES, ENT_COMPAT,'ISO-8859-1');
@@ -123,7 +127,7 @@ var_dump($output);
 /*
  * Extraindo meta tags
  * 
- * get_meta_tags(): Retorna array de meta tags de uma p·gina HTML.
+ * get_meta_tags(): Retorna array de meta tags de uma p√°gina HTML.
  */
 $metaTags = get_meta_tags('http://scba.capes.gov.br/scba/login.seam');
 echo "Robots {$metaTags['robots']}";
@@ -135,12 +139,12 @@ echo "Robots {$metaTags['robots']}";
 #### URLs ####
 
 /*
- * Existem 2 tipos de codificaÁ„o e decodificaÁ„o de URL. A da RFC(substitui espaÁo por %20, 
- * e a que implementa x-www-form-urlencoded(substitui espaÁo por +)
+ * Existem 2 tipos de codifica√ß√£o e decodifica√ß√£o de URL. A da RFC(substitui espa√ßo por %20, 
+ * e a que implementa x-www-form-urlencoded(substitui espa√ßo por +)
  * 
  * - No primeiro caso(RFC) usa-se rawurlencode() e rawurldecode()
- * - No segundo caso usa-se urlencode() e urldecode(): Esse È o formato para fazer strings de query e valores de cookie.
- * ⁄til para gerar query string.
+ * - No segundo caso usa-se urlencode() e urldecode(): Esse √© o formato para fazer strings de query e valores de cookie.
+ * √∫til para gerar query string.
  */
 
 $name = "Programming PHP";
@@ -162,7 +166,7 @@ echo "$url <br/>";
 #### SQL ####
 
 /*
- * O escape em SQL È simples, \, ' e " devem ser precedidos de \
+ * O escape em SQL √© simples, \, ' e " devem ser precedidos de \
  * Usase addslashes() e stripslashes() para colocar e remover respectivamente esses \.
  */
 $string = <<< EOF
@@ -174,7 +178,7 @@ echo "$string <br/>";
 echo stripslashes($string) . "<br/>";
 
 /*
- * Em alguns BDs usa-se o ' para escapar o prÛprio '. Nesse caso ativar o magic_quotes_sybase no php.ini
+ * Em alguns BDs usa-se o ' para escapar o pr√≥prio '. Nesse caso ativar o magic_quotes_sybase no php.ini
  */
 ?>
 
@@ -184,10 +188,10 @@ echo stripslashes($string) . "<br/>";
 #### Encoding C-String ####
 
 /*
- * addcslashes() e stripcslashes(): Escapa caracteres arbitr·rios.
- * S„o utilizados com bancos de dados n„o padrıes.
+ * addcslashes() e stripcslashes(): Escapa caracteres arbitr√°rios.
+ * S√£o utilizados com bancos de dados n√£o padr√µes.
  * 
- * Recebe 2 par‚metros:
+ * Recebe 2 par√¢metros:
  * 
  * - A string para escapar.
  * - Caracteres que devem ser escapados. Um range pode ser especificado separando por '..'

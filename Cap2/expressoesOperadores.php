@@ -3,11 +3,11 @@
 
 	/*
 	 * Integer e Ponto Flutuante: Integer transformado em ponto flutuante
-	 * Integer e String: String transformado em número, se for ponto flutuante, integer é convertido para ponto flutuante
+	 * Integer e String: String transformado em nÃºmero, se for ponto flutuante, integer Ã© convertido para ponto flutuante
 	 * Ponto Flutuante e String: String para ponto flutuante
 	 * 
-	 * ## Cast de String para número: Se não começar com número, tem valor zero. 
-	 * Se tiver "e" é ponto flutuante.
+	 * ## Cast de String para nÃºmero: Se nÃ£o comeÃ§ar com nÃºmero, tem valor zero. 
+	 * Se tiver "e" Ã© ponto flutuante.
 	 */
 
 	echo "9 Lives" - 1 . "<br/>"; // 8 (int)
@@ -17,10 +17,10 @@
 ?>
 
 <?php
-	##Concatenação##
+	##ConcatenaÃ§Ã£o##
 
 	/*
-	 * É usado o símbolo '.' para concatenar strings
+	 * Ã‰ usado o sÃ­mbolo '.' para concatenar strings
 	 */
 	$n = 5;
 	$s = 'There were ' . $n . ' ducks.';
@@ -34,7 +34,7 @@
 	 *	$++var, incrementa var e retorna o valor atualizado
 	 *  $var++, retorna o valor atualizardo de var e depois incrementa-a.
 	 *  
-	 *  Também podem ser utilizados em Strings, ex:
+	 *  TambÃ©m podem ser utilizados em Strings, ex:
 	 *  a vira b
 	 *  az vira ba
 	 */ 
@@ -44,21 +44,21 @@
 	##Comparadores##
 
 	/*
-	 * Operando 1			Operando 2			 			   Comparação
-	 * Número				Número				 				 Número
-	 * String Numérica		String Numérica		 				 Número
-	 * String Numérica		Número				 				 Número
-	 * String Numérica		String Não Int. Numérica	 		 Número
-	 * String Não Numérica	Número				 				Lexográfica
-	 * String Não Numérica 	String Não Numérica	 				Lexográfica										
+	 * Operando 1			Operando 2			 			   ComparaÃ§Ã£o
+	 * NÃºmero				NÃºmero				 				 NÃºmero
+	 * String NumÃ©rica		String NumÃ©rica		 				 NÃºmero
+	 * String NumÃ©rica		NÃºmero				 				 NÃºmero
+	 * String NumÃ©rica		String NÃ£o Int. NumÃ©rica	 		 NÃºmero
+	 * String NÃ£o NumÃ©rica	NÃºmero				 				LexogrÃ¡fica
+	 * String NÃ£o NumÃ©rica 	String NÃ£o NumÃ©rica	 				LexogrÃ¡fica										
 	 */
 
-	//Se quiser comprarar duas Strings numéricas lexograficamente usar a função strcmp()
+	//Se quiser comprarar duas Strings numÃ©ricas lexograficamente usar a funÃ§Ã£o strcmp()
 	
 	/*
 	 * != ou <> : Diferentes
 	 * === : Mesmo tipo e valor
-	 * !== :Não mesmo tipo ou mesmo valor.
+	 * !== :NÃ£o mesmo tipo ou mesmo valor.
 	 */
 ?>
 
@@ -66,17 +66,17 @@
 	##Bitwise##
 	
 	/*
-	 * Além de &, |, ^ (XOR):
+	 * AlÃ©m de &, |, ^ (XOR):
 	 * 
-	 * Left Shift(<<): Dá um shift no número da esquerda em número de posições igual
+	 * Left Shift(<<): DÃ¡ um shift no nÃºmero da esquerda em nÃºmero de posiÃ§Ãµes igual
 	 * ao da direita, colocando zeros. Ex: 3(11) << 1 = 6 (110)
 	 * 
-	 * Right Shift(>>): Mata o bit mais a direita, x posições.
+	 * Right Shift(>>): Mata o bit mais a direita, x posiÃ§Ãµes.
 	 */
 ?>
 
 <?php
-	##Operadores Lógicos##
+	##Operadores LÃ³gicos##
 
 	/*
 	 * (&&, and)
@@ -101,7 +101,7 @@
 	 *  Castar um array para string retorna "Array"
 	 *  
 	 *  Objeto para Array cria um array de propriedade, mapeando
-	 *  o nome da propriedade para o seu valor. O contrário também
+	 *  o nome da propriedade para o seu valor. O contrÃ¡rio tambÃ©m
 	 *  pode ser feito
 	 */
 
@@ -120,15 +120,15 @@
 	echo  "<br/>" . $o->name . "<br/>";
 	
 	/*
-	 * Se o nome da propriedade no array for inválida, ela vai ficar inacessível no objeto,
+	 * Se o nome da propriedade no array for invÃ¡lida, ela vai ficar inacessÃ­vel no objeto,
 	 * mas vai estar de volta ao array se o cast for feito de volta.
 	 */
 ?>
 
 <?php
-	##Operadores de Atribuição##
+	##Operadores de AtribuiÃ§Ã£o##
 
-	//No php esses operadores retornam o resultado da operação
+	//No php esses operadores retornam o resultado da operaÃ§Ã£o
 	$a = 5;
 	$b = 10;
 	$c = ($a = $b); #Aqui $a=$b retorna 10, c=10.
@@ -142,14 +142,14 @@
 	##Demais operadores##
 	 
 	/*
-	 * Supressão de erro (@): Tratamento das mensagens geradas pelos operadores ou funções.
-	 * Execução (`...`): Executa o comando como se fosse sheel script e retorna a saída. 
+	 * SupressÃ£o de erro (@): Tratamento das mensagens geradas pelos operadores ou funÃ§Ãµes.
+	 * ExecuÃ§Ã£o (`...`): Executa o comando como se fosse sheel script e retorna a saÃ­da. 
 	 */
 	$listing = `dir`;
 	echo $listing . "<br/>";
 	
 	/*
-	 * Condicional (? :): if ternário.
+	 * Condicional (? :): if ternÃ¡rio.
 	 * Type (instanceof) 
 	 */
 ?>

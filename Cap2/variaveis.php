@@ -1,16 +1,16 @@
 <?php 
-	//Vari·vel com nome armazenado em outra vari·vel.
+	//Vari√°vel com nome armazenado em outra vari√°vel.
 	$foo = "bar";
 	
-	//Com 2 $, eu pego o valor "bar", transformo-o em vari·vel e inicializo-o com o valor "baz".
+	//Com 2 $, eu pego o valor "bar", transformo-o em vari√°vel e inicializo-o com o valor "baz".
 	$$foo = "baz";
 ?>
 
 <?php 
 	/*
-	 * ReferÍncias de vari·veis. Apelidos para vari·veis.
+	 * Refer√™ncias de vari√°veis. Apelidos para vari√°veis.
 	 * 
-	 * Ex: fazer a vari·vel $black um alias para $white
+	 * Ex: fazer a vari√°vel $black um alias para $white
 	 */
 	$white = "snow";
 	$black =& $white;
@@ -19,7 +19,7 @@
 	unset($white);
 	print $black;
 	
-	//FunÁıes podem retornar valores por referÍncia colocando o & no comeÁo da funÁ„o.
+	//Fun√ß√µes podem retornar valores por refer√™ncia colocando o & no come√ßo da fun√ß√£o.
 	function &retRef() { 
 		$var = "PHP";
 		return $var;
@@ -30,18 +30,18 @@
 <br/>
 
 <?php 
-	//Escopo de vari·veis: local, global, static e par‚metros de funÁ„o.
+	//Escopo de vari√°veis: local, global, static e par√¢metros de fun√ß√£o.
 	
 	/*
 	 * Escopo local:
-	 * - Somente dentro de funÁıes
-	 * - Por padr„o, vari·veis globais n„o s„o visualizadas dentro de funÁ„o
-	 * - N„o existe escopo de loop, bloco condicional ou outro tipo de bloco.
+	 * - Somente dentro de fun√ß√µes
+	 * - Por padr√£o, vari√°veis globais n√£o s√£o visualizadas dentro de fun√ß√£o
+	 * - N√£o existe escopo de loop, bloco condicional ou outro tipo de bloco.
 	 */
 
 	//Escopo global.
 	function updateCounter() {
-		global $counter; //Sem a keyword global, vira uma vari·vel local.
+		global $counter; //Sem a keyword global, vira uma vari√°vel local.
 		$GLOBALS['counter']++; //outra forma
 		$counter++;
 	}
@@ -50,7 +50,7 @@
 	echo "{$counter}<br/><br/>"; //12
 	
 	/*
-	 * Escopo static. Vari·vel mantem o valor entre chamadas da funÁ„o, mas sÛ na funÁ„o.
+	 * Escopo static. Vari√°vel mantem o valor entre chamadas da fun√ß√£o, mas s√≥ na fun√ß√£o.
 	 */	
 	function updateCounterStatic() {
 		static $counter = 0;
@@ -63,7 +63,7 @@
 	echo "Global counter is {$counter}<br/>"; //imprime 10
 	
 	/*
-	 * Par‚metros de FunÁ„o, s„o locais.
+	 * Par√¢metros de Fun√ß√£o, s√£o locais.
 	 */
 	function greet($name) {
 		echo "Hello, {$name}\n";

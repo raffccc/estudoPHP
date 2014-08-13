@@ -1,20 +1,20 @@
 <?php
-	//Coment·rio simples
+	//Coment√°rio simples
 	
-	#Tambem È coment·rio
+	#Tambem √© coment√°rio
 	
 	/*
-	 * TambÈm È coment·rio
+	 * Tamb√©m √© coment√°rio
 	 */
 ?>
 
-<?php //isso n„o comenta atÈ o fim da linha  ?>
+<?php //isso n√£o comenta at√© o fim da linha  ?>
 <?php #nem isso  ?>
 
 <?php 
 	/*
-	 * PHP È fracamente tipada, regras de nomenclatura de vari·veis iguais aos do
-	 * java. Nome de v·ri·vel È case sensitive, j· a invocaÁ„o de mÈtodos È case
+	 * PHP √© fracamente tipada, regras de nomenclatura de vari√°veis iguais aos do
+	 * java. Nome de v√°ri√°vel √© case sensitive, j√° a invoca√ß√£o de m√©todos √© case
 	 * insensitive.
 	 */
  	$string = "Teste"; 	
@@ -37,11 +37,11 @@
 	$octal = 010;
 	$hexadecimal = 0xAB1;
 	$binario = 0b0011011;
-	//usa-se is_int() ou is_integer() pra saber se È inteiro
+	//usa-se is_int() ou is_integer() pra saber se √© inteiro
 	
 	$pontoFlutuante = 3.14;
 	$notacaoCientifica = 3.14e14;
-	//usa-se is_float() ou is_real() pra saber se È ponto flutuante
+	//usa-se is_float() ou is_real() pra saber se √© ponto flutuante
 	
 	echo $notacaoCientifica;
 ?>
@@ -52,38 +52,38 @@
 	//Strings
 	$nome = "Rafael"; 	
 
-	//Aspas duplas -> a vari·vel nome È interpretada.
+	//Aspas duplas -> a vari√°vel nome √© interpretada.
  	echo "Oi $nome<br/>"; 
  	
  	/*
- 	 * Aspas simples -> nome fica no texto e escape characters n„o s„o interpretados.
- 	 * Os ˙nicos caracteres de escape interpretados em aspas simples s„o \\ e \'.
+ 	 * Aspas simples -> nome fica no texto e escape characters n√£o s√£o interpretados.
+ 	 * Os √∫nicos caracteres de escape interpretados em aspas simples s√£o \\ e \'.
  	 */
  	echo 'Oi $nome';
  	
- 	//usa-se is_string() pra saber se È string.
+ 	//usa-se is_string() pra saber se √© string.
 ?>
 
 <br />
 
 <?php
 	/*
-	 * Booleanos o que È falso no php:
+	 * Booleanos o que √© falso no php:
 	 * 
 	 * 1) false
 	 * 2) 0
 	 * 3) Floating point 0.0
 	 * 4) String "" ou "0"
 	 * 5) Array vazio
-	 * 6) Objeto sem funÁıes ou valores
+	 * 6) Objeto sem fun√ß√µes ou valores
 	 * 7) NULL
 	 */ 
 
 	if ('0') {
-		echo "oi"; //N„o entra aqui.
+		echo "oi"; //N√£o entra aqui.
 	}
 	
-	//usa-se is_bool() pra saber se È string.
+	//usa-se is_bool() pra saber se √© string.
 ?>
 
 <br />
@@ -93,14 +93,14 @@
 	 * Arrays
 	 */ 
 
-	//J· d· pra declarar o array atribuindo valor aos itens
+	//J√° d√° pra declarar o array atribuindo valor aos itens
 	$arrayIndiceNumerico[0] = "Item1";
 	$arrayIndiceNumerico[1] = "Item2";
 	
 	$arrayIndiceString["Indice1"] = "Item1";
 	$arrayIndiceString["Indice2"] = "Item2";
 
-	//array() tambÈm pode construir
+	//array() tamb√©m pode construir
 	$arrayIndiceNumerico = array("Item1", "Item2", "Item3");
 	$arrayIndiceString = array(
 		"Indice1" => "Item1", 
@@ -117,7 +117,7 @@
 	echo "<br/>";
 	
 	foreach ($arrayIndiceNumerico as $indice => $item) {
-		echo "Õndice: {$indice}, Item: {$item}<br/>";
+		echo "√çndice: {$indice}, Item: {$item}<br/>";
 	}
 	
 	echo "<br/>";
@@ -129,31 +129,31 @@
 	echo "<br/>";
 	
 	foreach ($arrayIndiceString as $indice => $item) {
-		echo "Õndice: {$indice}, Item: {$item}<br/>";
+		echo "√çndice: {$indice}, Item: {$item}<br/>";
 	}
 	
 	//Ordenar array
 	sort($arrayIndiceNumerico);
-	//Ordena e mantem o mapeamento do Ìndice.
+	//Ordena e mantem o mapeamento do √çndice.
 	asort($arrayIndiceString);
 	
-	//usa-se is_array() pra saber se È array.
+	//usa-se is_array() pra saber se √© array.
 ?>
 
 <?php
 
 	/*
-	 * Resource - … um recurso utilizado por, por exemplo,
-	 * um banco de dados. Liberado apÛs a sua desvinculaÁ„o de uma
-	 * vari·vel.
+	 * Resource - √â um recurso utilizado por, por exemplo,
+	 * um banco de dados. Liberado ap√≥s a sua desvincula√ß√£o de uma
+	 * vari√°vel.
 	 * 
-	 * Usar is_resource() para saber se È um recurso.
+	 * Usar is_resource() para saber se √© um recurso.
 	 */
 ?>
 
 <?php 
 	/*
-	 * Callbacks funÁıes ou mÈtodos de objeto utilizados por algumas funÁıes,
+	 * Callbacks fun√ß√µes ou m√©todos de objeto utilizados por algumas fun√ß√µes,
 	 * como call_user_fun(). Podem ser criados pelo create_function() ou
 	 * closures.
 	 */
@@ -161,7 +161,7 @@
 
 <?php 
 	/*
-	 * is_null(), pra saber se È nulo
+	 * is_null(), pra saber se √© nulo
 	 */
 
 	$uninitializedVariable = null;

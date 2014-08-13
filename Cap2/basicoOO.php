@@ -14,5 +14,5 @@
 	$ed->name('Edison');
 	echo "Hello, {$ed->name}";
 	
-	//is_object() para verificar se é objeto	
+	//is_object() para verificar se Ã© objeto	
 ?>

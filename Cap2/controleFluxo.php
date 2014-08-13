@@ -1,8 +1,14 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
 <?php
 ## If ##
 
 /*
- * Os blocos de código do if podem ser cercados por chaves, ou seguido de ':'.
+ * Os blocos de cÃ³digo do if podem ser cercados por chaves, ou seguido de ':'.
  * Quando seguido por ':', deve-se colocar um endif ao final do bloco de ifs.
  * 
  * No php existe o elseif e else if...
@@ -40,13 +46,13 @@ switch($name) {
 		break;	
 }
 
-//Sintaxe anternativa seria switch($name): e ao invés de } "endswitch;"
+//Sintaxe anternativa seria switch($name): e ao invÃ©s de } "endswitch;"
 ?>
 
 <?php
 ## while ##
 
-//while também tém a sintaxe alternativa de ':' e 'endwhile;'
+//while tambÃ©m tem a sintaxe alternativa de ':' e 'endwhile;'
 
 //Ao lado do break ou do continue pode ser colocado quantos blocos se deseja sair.
 ?>
@@ -88,10 +94,10 @@ foreach ($arrayForeach as $key => $value) {
 <?php
 ## declare ##
 
-//Permite especificar diretivas de execução para um bloco de código. Duas Formas
+//Permite especificar diretivas de execuÃ§Ã£o para um bloco de cÃ³digo. Duas Formas
 
-// 1 - tick. A cada 4 statements no bloco do declare printf() é invocada. 
-register_tick_function("printf", "Meu nome é %s<br/>", "Rafael");
+// 1 - tick. A cada 4 statements no bloco do declare printf() Ã© invocada. 
+register_tick_function("printf", "Meu nome Ã© %s<br/>", "Rafael");
 declare (ticks = 4) {
 	for($i = 1; $i <= 10;  $i++) { //Uma linha 
 		echo $i, "<br/>"; //Outra linha
@@ -99,8 +105,8 @@ declare (ticks = 4) {
 }
 
 /*
- * Outra forma de diretiva é o encoding. Essa forma é ignorada ao menos que se compile o PHP com a opção --enable-zend-multibyte.
- * Deve ser a primeira linha do código.
+ * Outra forma de diretiva Ã© o encoding. Essa forma Ã© ignorada ao menos que se compile o PHP com a opÃ§Ã£o --enable-zend-multibyte.
+ * Deve ser a primeira linha do cÃ³digo.
  * declare(encoding = "UTF-8");
  */
 ?>
@@ -108,14 +114,14 @@ declare (ticks = 4) {
 <?php
 ## exit e return ##
 
-//o return é usado igual ao java
-//o alias do exit é die() (exit não existe), que recebe uma string ou código de status que é impresso antes do código terminar.
+//o return Ã© usado igual ao java
+//o alias do exit Ã© die() (exit nÃ£o existe), que recebe uma string ou cÃ³digo de status que Ã© impresso antes do cÃ³digo terminar.
 ?>
 
 <?php
 ## goto ##
 
-//usado para pular no fluxo. A label identificada no goto deve ser seguida de ":". Não se pode fazer goto para dentro de um loop ou switch
+//usado para pular no fluxo. A label identificada no goto deve ser seguida de ":". NÃ£o se pode fazer goto para dentro de um loop ou switch
 for($i = 0; $i < 5; $i++) {
 	if (false) {
 		goto cleanup;
@@ -124,3 +130,4 @@ for($i = 0; $i < 5; $i++) {
 cleanup:
 echo "goto";
 ?>
+</html>

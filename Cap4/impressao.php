@@ -1,16 +1,20 @@
+<head>
+	<meta charset="UTF-8">
+</head>
+
 <?php
 #### IMPRIMINDO STRINGS ####
 
 ## echo ##
 /*
- * … um construtor da linguagem, significa que pode-se omitir os parÍnteses.
+ * √â um construtor da linguagem, significa que pode-se omitir os par√™nteses.
  *
- * Pode-se especificar m˙ltiplos itens para imprimir separando-os por vÌrgula,
- * nesse caso n„o se pode usar par‚nteres.
+ * Pode-se especificar m√∫ltiplos itens para imprimir separando-os por v√≠rgula,
+ * nesse caso n√£o se pode usar par√™nteres.
  */
 echo "Primeiro","Segundo","Terceiro","<br/>";
 // echo ("Primeiro","Segundo","Terceiro"); erro de parse
-//Pelo fato de n„o ser uma funÁ„o, n„o pode ser utilizado como parte de outra express„o
+//Pelo fato de n√£o ser uma fun√ß√£o, n√£o pode ser utilizado como parte de outra express√£o
 
 ## print ##
 /*
@@ -22,58 +26,58 @@ if (print("test")) {
 
 ## printf ##
 /*
- * Imprime com formataÁ„o, substituindo os templates. Templates s„o precedidos de % (para imprimir
+ * Imprime com formata√ß√£o, substituindo os templates. Templates s√£o precedidos de % (para imprimir
  * % na tela colocar %%).
  *
  * A ordem depois do % deve ser a seguinte:
  *
- * - Caractere que deve ser utilizado para fazer o padding, especificar 0, espaÁo ou qualquer
- * caractere prefixado com ', espaÁo È o default.
+ * - Caractere que deve ser utilizado para fazer o padding, especificar 0, espa√ßo ou qualquer
+ * caractere prefixado com ', espa√ßo √© o default.
  *
- * - Sinal, para strings o menos forÁa a string a ser justificada para a esquerda. Para n˙meros
- * o sinal positivo forÁa a numeros positivos serem impressos com o (+).
+ * - Sinal, para strings o menos for√ßa a string a ser justificada para a esquerda. Para n√∫meros
+ * o sinal positivo for√ßa a numeros positivos serem impressos com o (+).
  *
- * - N˙mero mÌnimo de caracteres que esse elemento deve conter.
+ * - N√∫mero m√≠nimo de caracteres que esse elemento deve conter.
  *
- * - Para pontos flutuantes a precis„o, que consiste de ".n˙mero", para outros tipos que n„o
- * double, esse especificador È ignorado.
+ * - Para pontos flutuantes a precis√£o, que consiste de ".n√∫mero", para outros tipos que n√£o
+ * double, esse especificador √© ignorado.
  *
  * Tipos:
  *
- * %: Mostra o sÌmbolo %
- * b: argumento inteiro, mostra bin·rio
+ * %: Mostra o s√≠mbolo %
+ * b: argumento inteiro, mostra bin√°rio
  * c: argumento inteiro, mostra caractere
  * d: argumento inteiro, mostra decimal
- * e: argumento double, mostra notaÁ„o cientÌfica, (E: usa letras mai˙sculas)
+ * e: argumento double, mostra nota√ß√£o cient√≠fica, (E: usa letras mai√∫sculas)
  * f: argumento floating-point, mostrado no formato locale atual
  * F: argumento floating-point, mostrado como tal
- * g: argumento double, mostrado como no %e ou %f, o que for menor. (G: igual sÛ que %E ou %F)
+ * g: argumento double, mostrado como no %e ou %f, o que for menor. (G: igual s√≥ que %E ou %F)
  * o: argumento inteiro, mostra como octal
  * s: argumento string
  * u: Inteiro sem sinal, mostrado como decimal
- * x: Argumento inteiro, mostrado como hexadecimal, letras em min˙sculo (X: letras em mai˙sculo)
+ * x: Argumento inteiro, mostrado como hexadecimal, letras em min√∫sculo (X: letras em mai√∫sculo)
  */
 printf("%.2f <br/>", 27.456); //arredonda
-printf("Hexadecimal de %d È %x <br/>", 214, 214);
+printf("Hexadecimal de %d √© %x <br/>", 214, 214);
 printf("Bond. James Bond. %03d.<br/>", 7);
 printf("%02d/%02d/%04d<br/>", 24, 11, 1988);
 printf('%.1f%% Complete<br/>', 2.1);
 
-//7 caracteres, mostrando o sinal positivo, precis„o de duas casas decimais, padding feito com o caractere 'x'
-printf("VocÍ gastou $%'x+7.2f atÈ agora <br/>", 4.1);
+//7 caracteres, mostrando o sinal positivo, precis√£o de duas casas decimais, padding feito com o caractere 'x'
+printf("Voc√™ gastou $%'x+7.2f at√© agora <br/>", 4.1);
 
 ## sprintf ##
 /*
- * Mesma coisa que o printf sÛ que ao invÈs de imprimir na tela retorna a string,
- * para ser usada como uma vari·vel, por exemplo.
+ * Mesma coisa que o printf s√≥ que ao inv√©s de imprimir na tela retorna a string,
+ * para ser usada como uma vari√°vel, por exemplo.
 */
 
 ## print_r() e var_dump() ##
 /*
- * print_r() imprime de maneira mais amig·vel. Um array, por exemplo, È impresso com o
+ * print_r() imprime de maneira mais amig√°vel. Um array, por exemplo, √© impresso com o
  * par de chaves e valores, precedido pelo nome Array.
  *
- * print_r() no array move o iterador para o ˙ltimo elemento.
+ * print_r() no array move o iterador para o √∫ltimo elemento.
 */
 
 echo "<br/> print_r() <br/>";
@@ -83,7 +87,7 @@ print_r($a);
 echo "<br/>";
 
 /*
- * Quando se imprime um objeto, o output È a o nome da classe seguido de Object
+ * Quando se imprime um objeto, o output √© o nome da classe seguido de Object
 * seguido das propriedades do objeto e seus valores como no array.
 */
 class P {
@@ -94,10 +98,10 @@ print_r($p);
 echo "<br/>";
 
 /*
- * Booleanos e NULL n„o s„o exibidos com sentido pelo print_r().
+ * Booleanos e NULL n√£o s√£o exibidos com sentido pelo print_r().
 *
-* var_dump() È preferÌvel para debug, j· que imprime qualquer coisa em um formato mais
-* amig·vel para o homem.
+* var_dump() √© prefer√≠vel para debug, j√° que imprime qualquer coisa em um formato mais
+* amig√°vel para o homem.
 */
 print_r(true); // prints "1";
 print_r(false); // prints "";
@@ -115,7 +119,7 @@ echo "<br/>";
 var_dump($p);
 
 /*
- * Cuidado ao imprimir estruturas recursivas. var_dump() imprime atÈ a terceira
-* repetiÁ„o do mesmo elemento, enquando print_r() imprime infinitamente.
+ * Cuidado ao imprimir estruturas recursivas. var_dump() imprime at√© a terceira
+* repeti√ß√£o do mesmo elemento, enquando print_r() imprime infinitamente.
 */
 ?>
