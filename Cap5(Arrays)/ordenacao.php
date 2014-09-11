@@ -12,14 +12,14 @@
 /*
  * 1) Por chave
  * Crescente: ksort();
- * Descrescente: krsort();
+ * Decrescente: krsort();
  * Definida pelo usuário: uksort();
  */
 
 /*
  * 2) Por valor sem mudar as chaves
  * Crescente: asort();
- * Descrescente: arsort();
+ * Decrescente: arsort();
  * Definida pelo usuário: uasort();
  */
 $logins = array(
