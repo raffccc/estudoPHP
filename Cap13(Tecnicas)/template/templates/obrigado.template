@@ -1,0 +1,9 @@
+<html>
+	<head>
+		<title>Valeu!</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p><font face="helvetica,arial">Obrigado por ter preenchido formulário,	{NOME}.</font></p>
+	</body>
+</html>

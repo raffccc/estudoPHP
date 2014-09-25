@@ -1,0 +1,13 @@
+Dicas de segurança
+
+1) Filtrar o input para ter certeza que o dado que vc recebe da interface é o mesmo esperado.
+2) Escapar o output para se assegurar que seu dado não vai ser mal interpretado por um sistema remoto.
+3) Sempre inicializar as variáveis. Isso é especialmente importante a diretica register_globas estiver habilitade
+4) Desativar register_globals: Diz que as variáveis definidas por POST, GET, SERVER são globais.
+			 magic_quotes_gpc: Todas ", ', \ e NUL são escapadas com \. EX: \", \', \\, \NUL
+			 allow_url_fopen: PHP permite abrir arquivos remotamente pelo fopen.
+5) Sempre que for construir um nome de arquivo, checar o nome do arquivo com basename() e o caminho com realpath().
+6) Armazenar os includes fora da raiz dos documentos do php. Melhor não chamar os arquivos incluídos com a extensão .inc. Nomeá-las com .php ou outra extensão menos óbvia.
+7) Sempre chamar session_regenerate_id() qual o nível de privilégios do usuário mudar, tipo no login.
+8) Não criar um arquivo e depois mude as permissões de acesso. Use o umask() de modo que o arquivo criado possua as permissões corretas.
+9) Não utilizar dados disponibilizados pelo usuário no eval(), preg_replace() com a opção /e ou qualquer dos comandos de sistema exec(), system(), popen(), passthru() e o operador `;

@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>User Information</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p><font face="helvetica,arial">Favor preencher a seguinte informação:</font></p>
+		<form action="{DESTINO}">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" name="nome" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
